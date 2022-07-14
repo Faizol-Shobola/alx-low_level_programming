@@ -4,7 +4,7 @@
 /**
  * main - check the code
  *
- * return: Always 0.
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -14,5 +14,5 @@ int main(void)
 	 ptr = cap_string(str);
 	 printf("%s", ptr);
 	 printf("%s", str);
-	return (0);
+	 return (0);
 }
