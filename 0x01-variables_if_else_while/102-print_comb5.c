@@ -9,52 +9,27 @@
  */
 int main(void)
 {
-	int i, j, k, l;
+	int p, q;
 
-	i = j = k = 48;
-	l = 49;
-	while  ((i < 58))
+	for (p = 0; p <= 98; p++)
 	{
-		putchar(i); putchar(j);
-		putchar(32); putchar(k);
-		putchar(l);
-		if ((i == 57) && (j == 56) && (k == 57) && (l == 57))
+		for (q = p + 1; q <= 99; q++)
 		{
-			putchar('\n');
-			i++;
-		}
-		else
-		{
-			putchar(44);
-			putchar(32);
-			if ((k == 57) && (l == 57))
-			{
-				if (j < 56)
-				{
-					l = ++j + 1;
-					k = i;
-				}
-				else if (j == 56)
-				{
-					j++;
-					k = i + 1; l = 48;
-				}
-				else if (j == 57)
-				{
-					j = 48; l = 49;
-					k = ++i;
-				}
-			}
-			else if (l < 57)
-			{
-				l++;
-			}
-			else
-			{
-				l = 48; k++;
-			}
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
+			putchar(' ');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
+
+			if (p == 98 && q == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
+
+	putchar('\n');
+
 	return (0);
 }
-
